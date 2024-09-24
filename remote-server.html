@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('remote-server',{
+        category: 'config',
+        defaults: {
+            name : {value: ""},
+            url: {value:"",required:true},
+            user: {value:"",required:true},
+            password: {value:"",required:true},
+            accessId: {value: "",required:true},
+            sslVerify: {value: "true"},
+
+        },
+        label: function() {
+            return this.name || this.url;
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="remote-server">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-config-input-url"><i class="fa fa-link"></i> URL</label>
+        <input type="text" id="node-config-input-url" placeholder="https://url.com:port">
+    </div>
+
+    <div class="form-row">
+        <label for="node-config-input-user"><i class="fa fa-user"></i> User</label>
+        <input type="text" id="node-config-input-user" placeholder="username">
+    </div>
+
+    <div class="form-row">
+        <label for="node-config-input-password"><i class="fa fa-lock"></i> Password</label>
+        <input type="password" id="node-config-input-password" placeholder="password">
+    </div>
+
+ 
+    <div class="form-row">
+        <label for="node-config-input-accessId"><i class="fa fa-key"></i> Access ID</label>
+        <input type="text" id="node-config-input-accessId" placeholder="access-id">
+    </div>
+
+    <div class="form-row">
+        <label for="node-config-input-sslVerify"><i class="fa fa-shield"></i> SSL Ver.</label>
+        <select id="node-config-input-sslVerify">
+            <option value="true" selected>Enabled</option>
+            <option value="false">Disabled</option>
+        </select>
+    </div>
+</script>

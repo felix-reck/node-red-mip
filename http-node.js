@@ -9,15 +9,21 @@ module.exports = function (RED) {
             const https = require('https');
 
             node.name = config.name || 'HX';
-
-            //Input parameters
-            const url = config.url || msg.url;
-            const user = config.user || msg.user;
-            const password = config.password || msg.password;
             const service = config.service || msg.service;
             const method = config.method || msg.method || 'GET';
-            const accessId = config.accessId || msg.accessId;
-            const sslVerify = config.sslVerify === 'true';
+
+
+
+            //Input parameters
+            const server = RED.nodes.getNode(config.server);
+            const url = server.url;
+            const user = server.user;
+            const password = server.password;
+            const accessId = server.accessId;
+            const sslVerify = server.sslVerify === 'true';
+
+            //console.log(server.url);
+
 
 
             const agent = new https.Agent({ rejectUnauthorized: sslVerify });
@@ -87,7 +93,7 @@ module.exports = function (RED) {
                         node.send(error.response);
                     }
                 } else {
-                    node.status({ fill: "red", shape: "dot", text: "Fail :"+retryError.status });
+                    node.status({ fill: "red", shape: "dot", text: "Fail" });
                     node.error(error.message, msg);
                     node.send(error.response);
                 }
