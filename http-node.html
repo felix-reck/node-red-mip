@@ -1,0 +1,68 @@
+<script type="text/javascript">
+    RED.nodes.registerType('http-request', {
+        category: 'network',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: '' },         // Name field added
+            url: { value: '' },          // URL field
+            user: { value: '' },         // User field
+            password: { value: '' },     // Password field
+            service: { value: '' },      // Service field
+            method: { value: 'GET' },    // Method field (default to GET)
+            accessId: { value: '' },      // Access ID field
+            sslVerify: { value: 'true' }  // Default SSL Verification auf True
+        },
+        inputs: 1,     // Number of inputs to the node
+        outputs: 1,    // Number of outputs from the node
+        icon: "font-awesome/fa-globe", // Icon for the node
+        label: function () {
+            return this.name || this.url || "http-request"; // Node label: Name or URL
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="http-request">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+<div class="form-row">
+    <label for="node-input-url"><i class="fa fa-link"></i> URL</label>
+    <input type="text" id="node-input-url" placeholder="https://url.com:port">
+</div>
+
+<div class="form-row">
+    <label for="node-input-user"><i class="fa fa-user"></i> User</label>
+    <input type="text" id="node-input-user" placeholder="username">
+</div>
+
+<div class="form-row">
+    <label for="node-input-password"><i class="fa fa-lock"></i> Password</label>
+    <input type="password" id="node-input-password" placeholder="password">
+</div>
+
+<div class="form-row">
+    <label for="node-input-service"><i class="fa fa-cogs"></i> Service</label>
+    <input type="text" id="node-input-service" placeholder="service">
+</div>
+
+<div class="form-row">
+    <label for="node-input-method"><i class="fa fa-code"></i> Method</label>
+    <select id="node-input-method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+    </select>
+</div>
+
+<div class="form-row">
+    <label for="node-input-accessId"><i class="fa fa-key"></i> Access ID</label>
+    <input type="text" id="node-input-accessId" placeholder="access-id">
+</div>
+<div class="form-row">
+    <label for="node-input-sslVerify"><i class="fa fa-shield"></i> SSL Ver.</label>
+    <select id="node-input-sslVerify">
+        <option value="true" selected>Enabled</option>
+        <option value="false">Disabled</option>
+    </select>
+</div>
+</script>

@@ -1,0 +1,14 @@
+{
+    "name": "@reck/node-red-contrib-hydrax",
+    "version": "1.0.0",
+    "description": "A custom Node-RED node to interact with MPDV HydraX API",
+    "dependencies": {
+    },
+    "keywords": [ "node-red","mpdv","hydra","hydra-x"],
+    "node-red": {
+      "nodes": {
+        "http-request": "http-node.js"
+      }
+    }
+  }
+  
