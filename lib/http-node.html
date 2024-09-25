@@ -1,17 +1,17 @@
 <script type="text/javascript">
     RED.nodes.registerType('http-request', {
         category: 'network',
-        color: '#a6bbcf',
+        color: '#E3ECDF',
         defaults: {
             name: { value: '' },         // Name field added
-            service: { value: '' },      // Service field
+            service: { value: 'meta' },      // Service field
             method: { value: 'GET' },    // Method field (default to GET)
             server: { value: "", type: "remote-server" },
             format: {value: "original"}
         },
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
-        icon: "font-awesome/fa-globe", // Icon for the node
+        icon: "font-awesome/fa-exchange", // Icon for the node
         label: function () {
             return this.name || this.url || "http-request"; // Node label: Name or URL
         }
