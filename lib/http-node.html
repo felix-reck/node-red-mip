@@ -4,7 +4,8 @@
         color: '#E3ECDF',
         defaults: {
             name: { value: '' },         // Name field added
-            service: { value: 'meta' },      // Service field
+            servicetype: { value: 'meta'},     // meta oder data
+            service: { value: '' },      // Service field
             method: { value: 'GET' },    // Method field (default to GET)
             server: { value: "", type: "remote-server" },
             format: {value: "original"}
@@ -13,7 +14,7 @@
         outputs: 1,    // Number of outputs from the node
         icon: "font-awesome/fa-exchange", // Icon for the node
         label: function () {
-            return this.name || this.url || "http-request"; // Node label: Name or URL
+            return this.name || this.url || "http-request"; 
         }
     });
 </script>
@@ -27,6 +28,14 @@
     <div class="form-row">
         <label for="node-input-server"><i class="fa fa-link"></i> Name</label>
         <input type="text" id="node-input-server" placeholder="Server">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-servicetype"><i class="fa fa-cogs"></i> Type</label>
+        <select id="node-input-servicetype">
+            <option value="meta">meta</option>
+            <option value="data">data</option>
+        </select>
     </div>
 
 
