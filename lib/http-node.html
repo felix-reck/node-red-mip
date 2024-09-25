@@ -4,14 +4,10 @@
         color: '#a6bbcf',
         defaults: {
             name: { value: '' },         // Name field added
-           // url: { value: '' },          // URL field
-           // user: { value: '' },         // User field
-           // password: { value: '' },     // Password field
             service: { value: '' },      // Service field
             method: { value: 'GET' },    // Method field (default to GET)
-           // accessId: { value: '' },      // Access ID field
-           // sslVerify: { value: 'true' },  // Default SSL Verification auf True
-            server: { value: "", type: "remote-server" }
+            server: { value: "", type: "remote-server" },
+            format: {value: "original"}
         },
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
@@ -47,5 +43,12 @@
     </select>
 </div>
 
+<div class="form-row">
+    <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
+    <select id="node-input-format">
+        <option value="original" selected>Origial Output</option>
+        <option value="modified" >Modified Output</option>
+    </select>
+</div>
 
 </script>
