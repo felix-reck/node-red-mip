@@ -7,8 +7,8 @@
     "keywords": [ "node-red","mpdv","hydra","hydra-x"],
     "node-red": {
       "nodes": {
-        "http-request": "http-node.js",
-        "remote-server": "remote-server.js"
+        "http-request": "lib/http-node.js",
+        "remote-server": "config/remote-server.js"
       }
     }
   }
