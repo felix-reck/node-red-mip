@@ -29,6 +29,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       # Run npm install again in the publish step
       - run: npm install
+      # Set the version from the tag
+      - run: npm version from-git
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
