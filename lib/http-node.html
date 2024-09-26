@@ -7,14 +7,14 @@
             servicetype: { value: 'meta'},     // meta oder data
             service: { value: '' },      // Service field
             method: { value: 'GET' },    // Method field (default to GET)
-            server: { value: "", type: "remote-server" },
-            format: {value: "original"}
+            server: { value: '', type: 'remote-server' },
+            format: {value: 'original'}
         },
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
-        icon: "font-awesome/fa-exchange", // Icon for the node
+        icon: 'font-awesome/fa-exchange', // Icon for the node
         label: function () {
-            return this.name || this.url || "http-request"; 
+            return this.name || this.url || 'http-request'; 
         }
     });
 </script>
@@ -27,7 +27,7 @@
 
     <div class="form-row">
         <label for="node-input-server"><i class="fa fa-link"></i> Name</label>
-        <input type="text" id="node-input-server" placeholder="Server">
+        <input type="text" id="node-input-server">
     </div>
 
     <div class="form-row">

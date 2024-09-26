@@ -2,15 +2,15 @@
     RED.nodes.registerType('remote-server',{
         category: 'config',
         defaults: {
-            name : {value: ""},
-            url: {value:"",required:true},
-            user: {value:"",required:true},
-            accessId: {value: "",required:true},
-            sslVerify: {value: "true"},
+            name : {value: ''},
+            url: {value:'',required:true},
+            user: {value:'',required:true},
+            accessId: {value: '',required:true},
+            sslVerify: {value: 'true'},
 
         },
         credentials: {
-            password: {type:"password",required:true}
+            password: {type:'password',required:true}
         },
         label: function() {
             return this.name || this.url;
