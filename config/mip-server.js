@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-    function RemoteServerNode(n) {
+    function MipServerNode(n) {
         RED.nodes.createNode(this,n);
      
         this.name = n.name;
@@ -10,7 +10,7 @@ module.exports = function(RED) {
         this.sslVerify = n.sslVerify
         
     }
-    RED.nodes.registerType('remote-server',RemoteServerNode,{
+    RED.nodes.registerType('mip-server',MipServerNode,{
         credentials: {
             password: {type:'password'}
         }

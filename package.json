@@ -2,6 +2,10 @@
   "name": "@felix-reck/node-red-mip",
   "version": "0.0.2",
   "description": "A custom Node-RED node to interact with MPDV MIP HydraX API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felix-reck/node-red-mip.git"
+  },
   "license": "Apache-2.0",
   "author": "Felix Reck",
   "dependencies": {
@@ -15,9 +19,13 @@
     "hydra-x"
   ],
   "node-red": {
+    "version": ">=3.0",
     "nodes": {
       "http-request": "lib/http-node.js",
-      "remote-server": "config/remote-server.js"
+      "mip-server": "config/mip-server.js"
     }
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
