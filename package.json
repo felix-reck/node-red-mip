@@ -1,15 +1,21 @@
 {
-    "name": "@felix-reck/node-red-contrib-hydrax",
-    "version": "1.0.0",
-    "description": "A custom Node-RED node to interact with MPDV HydraX API",
-    "dependencies": {
-    },
-    "keywords": [ "node-red","mpdv","hydra","hydra-x"],
-    "node-red": {
-      "nodes": {
-        "http-request": "lib/http-node.js",
-        "remote-server": "config/remote-server.js"
-      }
+  "name": "@felix-reck/node-red-mip",
+  "version": "1.0.0",
+  "description": "A custom Node-RED node to interact with MPDV MIP HydraX API",
+  "dependencies": {
+    "axios": "^1.7.3"
+  },
+  "keywords": [
+    "node-red",
+    "mip",
+    "mpdv",
+    "hydra",
+    "hydra-x"
+  ],
+  "node-red": {
+    "nodes": {
+      "http-request": "lib/http-node.js",
+      "remote-server": "config/remote-server.js"
     }
   }
-  
+}
