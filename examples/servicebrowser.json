@@ -1,0 +1,520 @@
+[
+    {
+        "id": "959e34e9d7dbce49",
+        "type": "tab",
+        "label": "Service Browser",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2196f99a3bb90b5a",
+        "type": "http-request",
+        "z": "959e34e9d7dbce49",
+        "name": "Testsystem",
+        "servicetype": "meta",
+        "service": "",
+        "method": "GET",
+        "server": "b9e5321f1d3f9d5b",
+        "format": "modified",
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "d8c9cc7146ce5f4d",
+                "9820ac51a6eaa5a8"
+            ]
+        ]
+    },
+    {
+        "id": "9465eb88bafdd574",
+        "type": "inject",
+        "z": "959e34e9d7dbce49",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "2196f99a3bb90b5a"
+            ]
+        ]
+    },
+    {
+        "id": "d8c9cc7146ce5f4d",
+        "type": "debug",
+        "z": "959e34e9d7dbce49",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "9820ac51a6eaa5a8",
+        "type": "function",
+        "z": "959e34e9d7dbce49",
+        "name": "function 4",
+        "func": "msg.payload = msg.payload.map(element => ({ \"service\": element }));\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 80,
+        "wires": [
+            [
+                "41acc69cd9d20647"
+            ]
+        ]
+    },
+    {
+        "id": "41acc69cd9d20647",
+        "type": "ui-table",
+        "z": "959e34e9d7dbce49",
+        "group": "fb5c036e3330b41e",
+        "name": "",
+        "label": "text",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "maxrows": "25",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "d4cdf193ff27cb62",
+                "346598a3687ed520"
+            ]
+        ]
+    },
+    {
+        "id": "d4cdf193ff27cb62",
+        "type": "debug",
+        "z": "959e34e9d7dbce49",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "01de0282ebb89fe8",
+        "type": "ui-button",
+        "z": "959e34e9d7dbce49",
+        "group": "fb5c036e3330b41e",
+        "name": "Load Services",
+        "label": "Load Services",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "2196f99a3bb90b5a"
+            ]
+        ]
+    },
+    {
+        "id": "714d050413a41fd6",
+        "type": "debug",
+        "z": "959e34e9d7dbce49",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "346598a3687ed520",
+        "type": "change",
+        "z": "959e34e9d7dbce49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "service",
+                "pt": "msg",
+                "to": "payload.service",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 80,
+        "wires": [
+            [
+                "b5255c95d9d78f96"
+            ]
+        ]
+    },
+    {
+        "id": "b5255c95d9d78f96",
+        "type": "http-request",
+        "z": "959e34e9d7dbce49",
+        "name": "Testsystem",
+        "servicetype": "meta",
+        "service": "",
+        "method": "GET",
+        "server": "b9e5321f1d3f9d5b",
+        "format": "original",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "9182b31aab9183fe",
+                "0d4caa2a35bfc08a",
+                "c28179598439a623"
+            ]
+        ]
+    },
+    {
+        "id": "47feda6a7af7ed55",
+        "type": "ui-table",
+        "z": "959e34e9d7dbce49",
+        "group": "5fc733f3dfb566fa",
+        "name": "",
+        "label": "text",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": "",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "acronym",
+                "key": "acronym",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "714d050413a41fd6"
+            ]
+        ]
+    },
+    {
+        "id": "9182b31aab9183fe",
+        "type": "change",
+        "z": "959e34e9d7dbce49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.requestableColumns",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "47feda6a7af7ed55"
+            ]
+        ]
+    },
+    {
+        "id": "0d4caa2a35bfc08a",
+        "type": "debug",
+        "z": "959e34e9d7dbce49",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 160,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c28179598439a623",
+        "type": "change",
+        "z": "959e34e9d7dbce49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameters",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "78a7a58cab18890e"
+            ]
+        ]
+    },
+    {
+        "id": "78a7a58cab18890e",
+        "type": "ui-table",
+        "z": "959e34e9d7dbce49",
+        "group": "05f48671541cd0dc",
+        "name": "",
+        "label": "text",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": "",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "acronym",
+                "key": "acronym",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "isMandatory",
+                "key": "isMandatory",
+                "type": "tickcross",
+                "width": "",
+                "align": "center"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "714d050413a41fd6",
+                "0e2f9f32c3367293"
+            ]
+        ]
+    },
+    {
+        "id": "8dce0a415d151e43",
+        "type": "ui-notification",
+        "z": "959e34e9d7dbce49",
+        "ui": "41c22970c57bf010",
+        "position": "top right",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": true,
+        "className": "",
+        "name": "",
+        "x": 890,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e2f9f32c3367293",
+        "type": "function",
+        "z": "959e34e9d7dbce49",
+        "name": "function 7",
+        "func": "const stringList =msg.payload.supportedOperators\nconst serviceName = msg.payload.acronym;\n\n// Füge den dynamischen Service-Namen über der Tabelle hinzu\nlet html = `<h3>${serviceName}</h3>`;\n\n// Beginne die HTML-Tabelle mit \"Columnname\" als Spaltenüberschrift\nhtml += '<table border=\"1\"><thead><tr><th>Columnname</th></tr></thead><tbody>';\n\n// Füge jede Zeile zur Tabelle hinzu\nstringList.forEach(value => {\n    html += `<tr><td>${value}</td></tr>`;\n});\n\n// Beende die Tabelle\nhtml += '</tbody></table>';\n\n// Setze den HTML-String als msg.payload\nmsg.payload = html;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 180,
+        "wires": [
+            [
+                "8dce0a415d151e43"
+            ]
+        ]
+    },
+    {
+        "id": "b9e5321f1d3f9d5b",
+        "type": "remote-server",
+        "name": "TestServer",
+        "url": "https://localhost:8080",
+        "user": "12345",
+        "accessId": "00011245",
+        "sslVerify": "false"
+    },
+    {
+        "id": "fb5c036e3330b41e",
+        "type": "ui-group",
+        "name": "Services",
+        "page": "4696c6dbcd183140",
+        "width": "4",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "5fc733f3dfb566fa",
+        "type": "ui-group",
+        "name": "Requestable Columns",
+        "page": "4696c6dbcd183140",
+        "width": "4",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "05f48671541cd0dc",
+        "type": "ui-group",
+        "name": "Parameters (Filter, input)",
+        "page": "4696c6dbcd183140",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "41c22970c57bf010",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "showPageTitle": true,
+        "navigationStyle": "icon",
+        "titleBarStyle": "fixed"
+    },
+    {
+        "id": "4696c6dbcd183140",
+        "type": "ui-page",
+        "name": "Service Overview",
+        "ui": "41c22970c57bf010",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "flex",
+        "theme": "ea6072ecd83216b6",
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ea6072ecd83216b6",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    }
+]
