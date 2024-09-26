@@ -1,6 +1,6 @@
 {
   "name": "@felix-reck/node-red-mip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A custom Node-RED node to interact with MPDV MIP HydraX API",
   "license": "Apache-2.0",
   "author": "Felix Reck",
