@@ -23,7 +23,6 @@
         "nodes": [
             "41acc69cd9d20647",
             "346598a3687ed520",
-            "b5255c95d9d78f96",
             "47feda6a7af7ed55",
             "9182b31aab9183fe",
             "c28179598439a623",
@@ -37,7 +36,8 @@
             "7a3bce9b36fd90f3",
             "cc67fa639e4b6b9b",
             "b99e854c502d2313",
-            "8fbaef51a9027121"
+            "8fbaef51a9027121",
+            "16d1232346d7ecb1"
         ],
         "x": 54,
         "y": 219,
@@ -58,12 +58,12 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "2196f99a3bb90b5a",
             "9465eb88bafdd574",
             "9820ac51a6eaa5a8",
             "9caf85fde784bc4f",
             "17f6833d429573c9",
-            "a98137673cf421a3"
+            "a98137673cf421a3",
+            "41efed53905b2796"
         ],
         "x": 54,
         "y": 59,
@@ -88,41 +88,21 @@
             "70caea1fa7acb249",
             "4f6450117e2f4462",
             "9339554a3ef78da8",
-            "c597536e4a091f23",
-            "cc156bafd8b6f07c",
             "9f41bace2846e6c6",
             "6e0f6a525ed5e518",
             "32b1895c1ba7754a",
             "85dc80d33421eade",
             "5dab4ac0f1ed9044",
             "e56932a9f97dee0a",
-            "ea3d743dcbb29d7a",
             "f3e50dea137bb93a",
-            "378d9af0e97fb799"
+            "378d9af0e97fb799",
+            "caf9939122658cf9",
+            "9aacd79862229843"
         ],
         "x": 54,
         "y": 579,
         "w": 1072,
         "h": 222
-    },
-    {
-        "id": "2196f99a3bb90b5a",
-        "type": "http-request",
-        "z": "959e34e9d7dbce49",
-        "g": "2f7409cdced90fec",
-        "name": "Testsystem",
-        "servicetype": "meta",
-        "service": "",
-        "method": "GET",
-        "server": "449ec6cd9a229762",
-        "format": "original",
-        "x": 430,
-        "y": 100,
-        "wires": [
-            [
-                "9820ac51a6eaa5a8"
-            ]
-        ]
     },
     {
         "id": "9465eb88bafdd574",
@@ -145,7 +125,7 @@
         "y": 100,
         "wires": [
             [
-                "2196f99a3bb90b5a"
+                "41efed53905b2796"
             ]
         ]
     },
@@ -232,26 +212,7 @@
         "y": 260,
         "wires": [
             [
-                "b5255c95d9d78f96"
-            ]
-        ]
-    },
-    {
-        "id": "b5255c95d9d78f96",
-        "type": "http-request",
-        "z": "959e34e9d7dbce49",
-        "g": "9a4d43de148ba42e",
-        "name": "Testsystem",
-        "servicetype": "meta",
-        "service": "",
-        "method": "GET",
-        "server": "449ec6cd9a229762",
-        "format": "original",
-        "x": 550,
-        "y": 260,
-        "wires": [
-            [
-                "9d9202025a91ca0d"
+                "16d1232346d7ecb1"
             ]
         ]
     },
@@ -662,7 +623,7 @@
         "y": 620,
         "wires": [
             [
-                "c597536e4a091f23"
+                "caf9939122658cf9"
             ]
         ]
     },
@@ -693,44 +654,6 @@
         ]
     },
     {
-        "id": "c597536e4a091f23",
-        "type": "http-request",
-        "z": "959e34e9d7dbce49",
-        "g": "e975136680105c74",
-        "name": "Testsystem",
-        "servicetype": "data",
-        "service": "",
-        "method": "POST",
-        "server": "449ec6cd9a229762",
-        "format": "modified",
-        "x": 890,
-        "y": 620,
-        "wires": [
-            [
-                "9339554a3ef78da8"
-            ]
-        ]
-    },
-    {
-        "id": "cc156bafd8b6f07c",
-        "type": "http-request",
-        "z": "959e34e9d7dbce49",
-        "g": "e975136680105c74",
-        "name": "Testsystem",
-        "servicetype": "data",
-        "service": "BOOrder.list",
-        "method": "POST",
-        "server": "449ec6cd9a229762",
-        "format": "modified",
-        "x": 510,
-        "y": 760,
-        "wires": [
-            [
-                "32b1895c1ba7754a"
-            ]
-        ]
-    },
-    {
         "id": "9f41bace2846e6c6",
         "type": "template",
         "z": "959e34e9d7dbce49",
@@ -746,7 +669,7 @@
         "y": 760,
         "wires": [
             [
-                "cc156bafd8b6f07c"
+                "7525698d89ccd23f"
             ]
         ]
     },
@@ -960,26 +883,7 @@
         "y": 680,
         "wires": [
             [
-                "ea3d743dcbb29d7a"
-            ]
-        ]
-    },
-    {
-        "id": "ea3d743dcbb29d7a",
-        "type": "http-request",
-        "z": "959e34e9d7dbce49",
-        "g": "e975136680105c74",
-        "name": "Testsystem",
-        "servicetype": "meta",
-        "service": "",
-        "method": "GET",
-        "server": "449ec6cd9a229762",
-        "format": "original",
-        "x": 430,
-        "y": 680,
-        "wires": [
-            [
-                "f3e50dea137bb93a"
+                "9aacd79862229843"
             ]
         ]
     },
@@ -1096,18 +1000,103 @@
         "y": 160,
         "wires": [
             [
-                "2196f99a3bb90b5a"
+                "41efed53905b2796"
             ]
         ]
     },
     {
-        "id": "449ec6cd9a229762",
-        "type": "mip-server",
-        "name": "Testserver",
-        "url": "https://localhost:8080",
-        "user": "12345",
-        "accessId": "12345",
-        "sslVerify": "false"
+        "id": "41efed53905b2796",
+        "type": "MIP",
+        "z": "959e34e9d7dbce49",
+        "g": "2f7409cdced90fec",
+        "name": "",
+        "servicetype": "meta",
+        "service": "",
+        "method": "GET",
+        "server": "449ec6cd9a229762",
+        "format": "original",
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "9820ac51a6eaa5a8"
+            ]
+        ]
+    },
+    {
+        "id": "16d1232346d7ecb1",
+        "type": "MIP",
+        "z": "959e34e9d7dbce49",
+        "g": "9a4d43de148ba42e",
+        "name": "",
+        "servicetype": "meta",
+        "service": "",
+        "method": "POST",
+        "server": "449ec6cd9a229762",
+        "format": "modified",
+        "x": 530,
+        "y": 260,
+        "wires": [
+            [
+                "9d9202025a91ca0d"
+            ]
+        ]
+    },
+    {
+        "id": "caf9939122658cf9",
+        "type": "MIP",
+        "z": "959e34e9d7dbce49",
+        "g": "e975136680105c74",
+        "name": "",
+        "servicetype": "data",
+        "service": "",
+        "method": "POST",
+        "server": "449ec6cd9a229762",
+        "format": "modified",
+        "x": 890,
+        "y": 620,
+        "wires": [
+            [
+                "9339554a3ef78da8"
+            ]
+        ]
+    },
+    {
+        "id": "9aacd79862229843",
+        "type": "MIP",
+        "z": "959e34e9d7dbce49",
+        "g": "e975136680105c74",
+        "name": "",
+        "servicetype": "meta",
+        "service": "",
+        "method": "POST",
+        "server": "449ec6cd9a229762",
+        "format": "modified",
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "f3e50dea137bb93a"
+            ]
+        ]
+    },
+    {
+        "id": "7525698d89ccd23f",
+        "type": "MIP",
+        "z": "959e34e9d7dbce49",
+        "name": "",
+        "servicetype": "meta",
+        "service": "",
+        "method": "POST",
+        "server": "449ec6cd9a229762",
+        "format": "modified",
+        "x": 509.93328857421875,
+        "y": 763.9332885742188,
+        "wires": [
+            [
+                "32b1895c1ba7754a"
+            ]
+        ]
     },
     {
         "id": "fb5c036e3330b41e",
@@ -1214,6 +1203,15 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "449ec6cd9a229762",
+        "type": "mip-server",
+        "name": "Testserver",
+        "url": "https://localhost:8080",
+        "user": "12345",
+        "accessId": "12345",
+        "sslVerify": "false"
     },
     {
         "id": "4696c6dbcd183140",

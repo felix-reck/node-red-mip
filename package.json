@@ -1,6 +1,6 @@
 {
   "name": "@felix-reck/node-red-mip",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A custom Node-RED node to interact with MPDV MIP HydraX API",
   "repository": {
     "type": "git",
@@ -19,13 +19,13 @@
     "hydra-x"
   ],
   "node-red": {
-    "version": ">=3.0",
+    "version": ">=3.0.0",
     "nodes": {
-      "http-request": "lib/http-node.js",
+      "http-request": "lib/mip-node.js",
       "mip-server": "config/mip-server.js"
     }
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18.0.0"
   }
 }

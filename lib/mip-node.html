@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('http-request', {
+    RED.nodes.registerType('MIP', {
         category: 'network',
         color: '#E3ECDF',
         defaults: {
@@ -14,12 +14,12 @@
         outputs: 1,    // Number of outputs from the node
         icon: 'font-awesome/fa-exchange', // Icon for the node
         label: function () {
-            return this.name || this.url || 'http-request'; 
+            return this.name || this.url || 'MIP'; 
         }
     });
 </script>
 
-<script type="text/html" data-template-name="http-request">
+<script type="text/html" data-template-name="MIP">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
