@@ -5,10 +5,14 @@ module.exports = function(RED) {
         this.name = n.name;
         this.url = n.url;
         this.user = n.user;
-        this.password = n.password;
+        this.password = this.credentials.password; // aus credentials store
         this.accessId = n.accessId;
         this.sslVerify = n.sslVerify
         
     }
-    RED.nodes.registerType("remote-server",RemoteServerNode);
+    RED.nodes.registerType("remote-server",RemoteServerNode,{
+        credentials: {
+            password: {type:"password"}
+        }
+    });
 }
