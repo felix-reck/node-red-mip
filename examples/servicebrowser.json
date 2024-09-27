@@ -1006,7 +1006,7 @@
     },
     {
         "id": "41efed53905b2796",
-        "type": "MIP",
+        "type": "mip",
         "z": "959e34e9d7dbce49",
         "g": "2f7409cdced90fec",
         "name": "",
@@ -1025,7 +1025,7 @@
     },
     {
         "id": "16d1232346d7ecb1",
-        "type": "MIP",
+        "type": "mip",
         "z": "959e34e9d7dbce49",
         "g": "9a4d43de148ba42e",
         "name": "",
@@ -1044,7 +1044,7 @@
     },
     {
         "id": "caf9939122658cf9",
-        "type": "MIP",
+        "type": "mip",
         "z": "959e34e9d7dbce49",
         "g": "e975136680105c74",
         "name": "",
@@ -1063,7 +1063,7 @@
     },
     {
         "id": "9aacd79862229843",
-        "type": "MIP",
+        "type": "mip",
         "z": "959e34e9d7dbce49",
         "g": "e975136680105c74",
         "name": "",
@@ -1082,7 +1082,7 @@
     },
     {
         "id": "7525698d89ccd23f",
-        "type": "MIP",
+        "type": "mip",
         "z": "959e34e9d7dbce49",
         "name": "",
         "servicetype": "meta",
