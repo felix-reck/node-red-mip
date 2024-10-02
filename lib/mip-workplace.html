@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mip workplace', {
+        category: 'network',
+        color: '#E3ECDF',
+        defaults: {
+            name: { value: '' },         // Name field added
+            //servicetype: { value: 'meta'},     // meta oder data
+            //service: { value: '' },      // Service field
+            //method: { value: 'GET' },    // Method field (default to GET)
+            server: { value: '', type: 'mip-server' },
+            format: {value: 'original'}
+        },
+        inputs: 1,     // Number of inputs to the node
+        outputs: 1,    // Number of outputs from the node
+        icon: 'font-awesome/fa-exchange', // Icon for the node
+        label: function () {
+            return this.name || this.url || 'mip workplace'; 
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="mip workplace">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-link"></i> Name</label>
+        <input type="text" id="node-input-server">
+    </div>
+
+
+</script>
