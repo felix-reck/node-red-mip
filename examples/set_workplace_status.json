@@ -1,0 +1,100 @@
+[
+    {
+        "id": "f5a88dbae5a3f392",
+        "type": "inject",
+        "z": "1f10f95b8958d7c6",
+        "name": "Status 1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "21380301",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "bc566379ec52d852"
+            ]
+        ]
+    },
+    {
+        "id": "64fadbcc31b5a5a9",
+        "type": "debug",
+        "z": "1f10f95b8958d7c6",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bc566379ec52d852",
+        "type": "mip-wp-status",
+        "z": "1f10f95b8958d7c6",
+        "name": "",
+        "server": "9a941b9de9acbc70",
+        "format": "modified",
+        "x": 340,
+        "y": 80,
+        "wires": [
+            [
+                "64fadbcc31b5a5a9"
+            ]
+        ]
+    },
+    {
+        "id": "169762198eff0ede",
+        "type": "inject",
+        "z": "1f10f95b8958d7c6",
+        "name": "Status 11",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "21380301",
+        "payload": "11",
+        "payloadType": "num",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "bc566379ec52d852"
+            ]
+        ]
+    },
+    {
+        "id": "9a941b9de9acbc70",
+        "type": "mip-server",
+        "name": "Testserver",
+        "url": "https://localhost:8080",
+        "user": "12345",
+        "accessId": "12345",
+        "sslVerify": "false"
+    }
+]

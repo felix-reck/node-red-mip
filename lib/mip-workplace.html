@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('mip wp status', {
+    RED.nodes.registerType('mip-wp-status', {
         category: 'network',
         color: '#E3ECDF',
         defaults: {
@@ -10,13 +10,14 @@
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
         icon: 'font-awesome/fa-exchange', // Icon for the node
+        paletteLabel: 'mip wp status',
         label: function () {
             return this.name || this.url || 'mip workplace';
         }
     });
 </script>
 
-<script type="text/html" data-template-name="mip wp status">
+<script type="text/html" data-template-name="mip-wp-status">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -38,7 +39,7 @@
 
 </script>
 
-<script type="text/markdown" data-help-name="mip wp status">
+<script type="text/markdown" data-help-name="mip-wp-status">
     Connects to the workplace and changes its status.
     
     ### Inputs
