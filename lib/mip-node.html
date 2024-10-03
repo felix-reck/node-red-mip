@@ -61,3 +61,33 @@
 </div>
 
 </script>
+
+<script type="text/markdown" data-help-name="mip">
+    Connects to the workplace and changes its status.
+    
+    ### Inputs
+    
+    : **msg.payload** json  : contains request body. For example:
+    {
+        "params": [
+            {
+                "acronym": "order.id",
+                "value": "000000000815",
+                "operator": "EQUAL"
+            }
+        ],
+        "columns": [],
+        "returnAsObject": false
+    }
+
+    for the request body beeing accepted, POST has to be used
+    
+    ### Outputs
+    
+    : **msg.payload** (any)      : Contains the output of the request, either in its original format or better formatted, based on the configuration.
+    
+    ### Configuration
+    
+    : **Output** : Either the response as received from the web server or a more readable formatted output.
+    </script>
+    
