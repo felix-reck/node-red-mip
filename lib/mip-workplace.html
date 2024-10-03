@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mip wp status', {
+        category: 'network',
+        color: '#E3ECDF',
+        defaults: {
+            name: { value: '' },         // Name field added
+            server: { value: '', type: 'mip-server' },
+            format: { value: 'original' }
+        },
+        inputs: 1,     // Number of inputs to the node
+        outputs: 1,    // Number of outputs from the node
+        icon: 'font-awesome/fa-exchange', // Icon for the node
+        label: function () {
+            return this.name || this.url || 'mip workplace';
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="mip wp status">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-link"></i> Name</label>
+        <input type="text" id="node-input-server">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
+        <select id="node-input-format">
+            <option value="original" selected>Origial Output</option>
+            <option value="modified" >Modified Output</option>
+        </select>
+    </div>
+
+
+</script>
+
+<script type="text/markdown" data-help-name="mip wp status">
+    Connects to the workplace and changes its status.
+    
+    ### Inputs
+    
+    : **msg.payload** (integer)  : The status of the workplace, an integer from 1 to n.
+    : **msg.topic** (string)     : The workplace identifier.
+    
+    : **Optional**
+    : **msg.timestamp** (string)  : Timestamp of the status change. If not provided, the current system timestamp will be used.
+    
+    ### Outputs
+    
+    : **msg.payload** (any)      : Contains the output of the request, either in its original format or better formatted, based on the configuration.
+    
+    ### Configuration
+    
+    : **Output** : Either the response as received from the web server or a more readable formatted output.
+    </script>
+    
