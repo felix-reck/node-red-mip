@@ -63,32 +63,50 @@
 
 </script>
 
-<script type="text/markdown" data-help-name="mip">
-    Connects to the workplace and changes its status.
-    
-    ### Inputs
-    
-    : **msg.payload** json  : contains request body. For example:
-    {
-        "params": [
-            {
-                "acronym": "order.id",
-                "value": "000000000815",
-                "operator": "EQUAL"
-            }
-        ],
-        "columns": [],
-        "returnAsObject": false
-    }
+<script type="text/html" data-help-name="mip">
+    <p>Connects to the workplace and changes its status.</p>
 
-    for the request body beeing accepted, POST has to be used
-    
-    ### Outputs
-    
-    : **msg.payload** (any)      : Contains the output of the request, either in its original format or better formatted, based on the configuration.
-    
-    ### Configuration
-    
-    : **Output** : Either the response as received from the web server or a more readable formatted output.
-    </script>
-    
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">json</span>
+        </dt>
+        <dd>Contains the request body. For example:</dd>
+        <pre>
+{
+    "params": [
+        {
+            "acronym": "order.id",
+            "value": "000000000815",
+            "operator": "EQUAL"
+        }
+    ],
+    "columns": [],
+    "returnAsObject": false
+}
+        </pre>
+        <dd>For the request body to be accepted, the method must be set to <strong>POST</strong>.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">any</span></dt>
+                <dd>Contains the output of the request, either in its original format or better formatted, based on the configuration.</dd>
+            </dl>
+    </ol>
+
+    <h3>Details</h3>
+    <p><code>payload</code> is used to send the request to the workplace. 
+    It should follow the structure as shown in the example, with parameters and values.
+    The method to be used is <strong>POST</strong>.</p>
+    <p>The response will be returned either in its raw format or formatted according to the configuration of the node.</p>
+
+    <h3>Configuration</h3>
+    <p>The node allows you to configure the output format. You can choose whether the response should be displayed as received from the server or in a more readable format.</p>
+
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://github.com/felix-reck/node-red-mip">GitHub</a> - the node's GitHub repository</li>
+    </ul>
+</script>
