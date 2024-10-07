@@ -39,23 +39,38 @@
 
 </script>
 
-<script type="text/markdown" data-help-name="mip-wp-status">
-    Connects to the workplace and changes its status.
-    
-    ### Inputs
-    
-    : **msg.payload** (integer)  : The status of the workplace, an integer from 1 to n.
-    : **msg.topic** (string)     : The workplace identifier.
-    
-    : **Optional**
-    : **msg.timestamp** (string)  : Timestamp of the status change. If not provided, the current system timestamp will be used.
-    
-    ### Outputs
-    
-    : **msg.payload** (any)      : Contains the output of the request, either in its original format or better formatted, based on the configuration.
-    
-    ### Configuration
-    
-    : **Output** : Either the response as received from the web server or a more readable formatted output.
-    </script>
-    
+<script type="text/html" data-help-name="mip-wp-status">
+    <p>Connects to the workplace and changes its status.</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">integer</span>
+        </dt>
+        <dd>The status of the workplace, an integer from 1 to n.</dd>
+        <dt>topic
+            <span class="property-type">string</span>
+        </dt>
+        <dd>The workplace identifier.</dd>
+        <dt class="optional">timestamp
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Optional: Timestamp of the status change. If not provided, the current system timestamp will be used.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">any</span></dt>
+                <dd>Contains the output of the request, either in its original format or better formatted, based on the configuration.</dd>
+            </dl>
+    </ol>
+
+    <h3>Configuration</h3>
+    <p>The output can be configured to return either the response as received from the web server or a more readable, formatted output.</p>
+
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://github.com/felix-reck/node-red-mip">GitHub</a> - the node's GitHub repository</li>
+    </ul>
+</script>
