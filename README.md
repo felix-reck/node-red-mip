@@ -22,3 +22,9 @@ Testet with HydraX and Hydra8
 - **SSL Verification**: Enable or disable SSL verification (default: Enabled).
 
 ### Example
+
+
+## TODO
+- [ ] Improve error message quality
+- [ ] Implement detailed logging functionality
+- [ ] Expand documentation with more examples
