@@ -25,7 +25,7 @@ Testet with HydraX and Hydra8
 
 
 ## TODO
-- [ ] Improve error message quality
+- [x] Improve error message quality
 - [ ] Implement detailed logging functionality
 - [ ] Expand documentation with more examples
 
