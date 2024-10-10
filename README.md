@@ -22,3 +22,15 @@ Testet with HydraX and Hydra8
 - **SSL Verification**: Enable or disable SSL verification (default: Enabled).
 
 ### Example
+
+
+## TODO
+- [x] Improve error message quality
+- [ ] Implement detailed logging functionality
+- [ ] Expand documentation with more examples
+
+
+
+##
+> **Disclaimer:** This Node-RED module is **unofficial** and is not affiliated with MPDV. Use at your own discretion.
+

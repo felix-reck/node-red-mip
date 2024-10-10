@@ -3,16 +3,16 @@
         category: 'network',
         color: '#E3ECDF',
         defaults: {
-            name: { value: '' },         // Name field added
-            servicetype: { value: 'meta'},     // meta oder data
-            service: { value: '' },      // Service field
-            method: { value: 'GET' },    // Method field (default to GET)
+            name: { value: '' },
+            servicetype: { value: 'meta'},
+            service: { value: '' },
+            method: { value: 'GET' },
             server: { value: '', type: 'mip-server' },
-            format: {value: 'original'}
+            format: {value: 'modified'}
         },
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
-        icon: 'font-awesome/fa-exchange', // Icon for the node
+        icon: 'font-awesome/fa-globe', // Icon for the node
         paletteLabel: 'mip',
         label: function () {
             return this.name || this.url || 'mip node'; 
@@ -27,7 +27,7 @@
     </div>
 
     <div class="form-row">
-        <label for="node-input-server"><i class="fa fa-link"></i> Name</label>
+        <label for="node-input-server"><i class="fa fa-link"></i> Server</label>
         <input type="text" id="node-input-server">
     </div>
 
@@ -56,8 +56,9 @@
 <div class="form-row">
     <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
     <select id="node-input-format">
-        <option value="original" selected>Origial Output</option>
-        <option value="modified" >Modified Output</option>
+        <option value="original" selected>Raw Output</option>
+        <option value="restructured" >Restructured Output</option>
+        <option value="modified" >Transformed Output</option>
     </select>
 </div>
 
@@ -103,7 +104,12 @@
     <p>The response will be returned either in its raw format or formatted according to the configuration of the node.</p>
 
     <h3>Configuration</h3>
-    <p>The node allows you to configure the output format. You can choose whether the response should be displayed as received from the server or in a more readable format.</p>
+    <p>The output can be configured to return:</p>
+    <ul>
+        <li><strong>Raw:</strong> As received from the API.</li>
+        <li><strong>Restructured:</strong> As an object with key-value pairs.</li>
+        <li><strong>Transformed:</strong> As an object with key-value pairs, but with dots in the keys replaced by underscores.</li>
+    </ul>
 
     <h3>References</h3>
     <ul>

@@ -3,13 +3,13 @@
         category: 'network',
         color: '#E3ECDF',
         defaults: {
-            name: { value: '' },         // Name field added
+            name: { value: '' },
             server: { value: '', type: 'mip-server' },
-            format: { value: 'original' }
+            format: { value: 'modified' }
         },
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
-        icon: 'font-awesome/fa-exchange', // Icon for the node
+        icon: 'font-awesome/fa-globe', // Icon for the node
         paletteLabel: 'mip wp status',
         label: function () {
             return this.name || this.url || 'mip workplace';
@@ -24,15 +24,16 @@
     </div>
 
     <div class="form-row">
-        <label for="node-input-server"><i class="fa fa-link"></i> Name</label>
+        <label for="node-input-server"><i class="fa fa-link"></i> Server</label>
         <input type="text" id="node-input-server">
     </div>
 
     <div class="form-row">
         <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
         <select id="node-input-format">
-            <option value="original" selected>Origial Output</option>
-            <option value="modified" >Modified Output</option>
+            <option value="original" selected>Raw Output</option>
+            <option value="restructured" >Restructured Output</option>
+            <option value="modified" >Transformed Output</option>
         </select>
     </div>
 
@@ -59,15 +60,18 @@
     </dl>
 
     <h3>Outputs</h3>
-    <ol class="node-ports">
-            <dl class="message-properties">
-                <dt>payload <span class="property-type">any</span></dt>
-                <dd>Contains the output of the request, either in its original format or better formatted, based on the configuration.</dd>
-            </dl>
-    </ol>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">any</span></dt>
+        <dd>Contains the output of the request, either in its original format or better formatted, based on the configuration.</dd>
+    </dl>
 
     <h3>Configuration</h3>
-    <p>The output can be configured to return either the response as received from the web server or a more readable, formatted output.</p>
+    <p>The output can be configured to return:</p>
+    <ul>
+        <li><strong>Raw:</strong> As received from the API.</li>
+        <li><strong>Restructured:</strong> As an object with key-value pairs.</li>
+        <li><strong>Transformed:</strong> As an object with key-value pairs, but with dots in the keys replaced by underscores.</li>
+    </ul>
 
     <h3>References</h3>
     <ul>
