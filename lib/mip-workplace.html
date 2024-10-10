@@ -5,7 +5,7 @@
         defaults: {
             name: { value: '' },         // Name field added
             server: { value: '', type: 'mip-server' },
-            format: { value: 'original' }
+            format: { value: 'modified' }
         },
         inputs: 1,     // Number of inputs to the node
         outputs: 1,    // Number of outputs from the node
@@ -31,8 +31,9 @@
     <div class="form-row">
         <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
         <select id="node-input-format">
-            <option value="original" selected>Origial Output</option>
-            <option value="modified" >Modified Output</option>
+            <option value="original" selected>Raw Output</option>
+            <option value="restructured" >Restructured Output</option>
+            <option value="modified" >Transformed Output</option>
         </select>
     </div>
 
