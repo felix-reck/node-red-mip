@@ -7,9 +7,6 @@ This Node-RED module allows integration with the REST API of the Hydra MES Syste
 Testet with HydraX and Hydra8
 
 > **Note:** This module is currently a **work in progress** and is actively being developed. Future updates will bring additional features and improvements.
-> 
-> **Disclaimer:** This Node-RED module is **unofficial** and is not affiliated with MPDV. Use at your own discretion.
-
 
 ## Usage
 
@@ -31,3 +28,9 @@ Testet with HydraX and Hydra8
 - [ ] Improve error message quality
 - [ ] Implement detailed logging functionality
 - [ ] Expand documentation with more examples
+
+
+
+##
+> **Disclaimer:** This Node-RED module is **unofficial** and is not affiliated with MPDV. Use at your own discretion.
+
