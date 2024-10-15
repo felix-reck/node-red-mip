@@ -57,8 +57,9 @@
     <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
     <select id="node-input-format">
         <option value="original" selected>Raw Output</option>
+        <option value="returnAsObject" selected>Raw Output as Object</option>
         <option value="restructured" >Restructured Output</option>
-        <option value="modified" >Transformed Output</option>
+        <option value="modified" >Transformed (recommended)</option>
     </select>
 </div>
 
@@ -106,9 +107,10 @@
     <h3>Configuration</h3>
     <p>The output can be configured to return:</p>
     <ul>
-        <li><strong>Raw:</strong> As received from the API.</li>
-        <li><strong>Restructured:</strong> As an object with key-value pairs.</li>
-        <li><strong>Transformed:</strong> As an object with key-value pairs, but with dots in the keys replaced by underscores.</li>
+        <li><strong>Raw Output:</strong> The response exactly as received from the API.</li>
+        <li><strong>Raw Output as Object:</strong> The API response with the addition of <code>returnAsObject=true</code>.</li>
+        <li><strong>Restructured Output:</strong> The API response formatted as an object with key-value pairs for easier access.</li>
+        <li><strong>Transformed Output:</strong> The API response as an object with key-value pairs, where dots in the keys are replaced by underscores. This is the recommended setting, as it simplifies preprocessing of the data.</li>
     </ul>
 
     <h3>References</h3>
