@@ -7,7 +7,8 @@ module.exports = function(RED) {
         this.user = n.user;
         this.password = this.credentials.password; // aus credentials store
         this.accessId = String(n.accessId).padStart(8, '0'); //
-        this.sslVerify = n.sslVerify
+        this.sslVerify = n.sslVerify,
+        this.maxResponseSize = n.maxResponseSize
         
     }
     RED.nodes.registerType('mip-server',mipServerNode,{
