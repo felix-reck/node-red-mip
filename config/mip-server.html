@@ -6,8 +6,8 @@
             url: {value:'',required:true},
             user: {value:'',required:true},
             accessId: {value: '',required:true},
-            sslVerify: {value: 'true'},
-
+            maxResponseSize: {vlaue: ''},
+            sslVerify: {value: 'true'}
         },
         credentials: {
             password: {type:'password',required:true}
@@ -39,10 +39,14 @@
         <input type="password" id="node-config-input-password" placeholder="password">
     </div>
 
- 
     <div class="form-row">
         <label for="node-config-input-accessId"><i class="fa fa-key"></i> Access ID</label>
         <input type="text" id="node-config-input-accessId" placeholder="access-id">
+    </div>
+
+    <div class="form-row">
+        <label for="node-config-input-maxResponseSize"><i class="fa fa-arrows-alt"></i> Size (MB)</label>
+        <input type="number" id="node-config-input-maxResponseSize" placeholder="max-response-size in MB, default 5 MB">
     </div>
 
     <div class="form-row">
