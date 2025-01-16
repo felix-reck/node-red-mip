@@ -26,8 +26,8 @@ Testet with HydraX and Hydra8
 
 ## TODO
 - [x] Improve error message quality
-- [ ] Implement detailed logging functionality
 - [ ] Expand documentation with more examples
+- [ ] Add Exception handling for invalid URL
 
 
 
