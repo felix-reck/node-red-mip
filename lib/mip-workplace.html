@@ -5,6 +5,7 @@
         defaults: {
             name: { value: '' },
             server: { value: '', type: 'mip-server' },
+            automatic: { value: false }, //wheter send the status as automatic or manual user
             format: { value: 'modified' }
         },
         inputs: 1,
@@ -28,6 +29,12 @@
         <input type="text" id="node-input-server">
     </div>
 
+    <div class="form-row">
+        <label for="node-input-automatic"><i class="fa fa-cogs"></i> Automatic</label>
+        <input type="checkbox" id="node-input-automatic">
+    </div>
+    
+    
     <div class="form-row">
         <label for="node-input-format"><i class="fa fa-table"></i> Output</label>
         <select id="node-input-format">
@@ -72,6 +79,7 @@
         <li><strong>Raw Output:</strong> The response exactly as received from the API.</li>
         <li><strong>Raw Output as Object:</strong> The API response with the addition of <code>returnAsObject=true</code>.</li>
         <li><strong>Restructured Output:</strong> The API response formatted as an object with key-value pairs for easier access.</li>
+        <li><strong>Automatic:</strong> Flag whether status is set manually or automatically - default: manually". If workplace in Hydra doesn't allow manual status, using manual won't work</li>
         <li><strong>Transformed Output:</strong> The API response as an object with key-value pairs, where dots in the keys are replaced by underscores. This is the recommended setting, as it simplifies preprocessing of the data.</li>
     </ul>
 
