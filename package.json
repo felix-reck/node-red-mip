@@ -4,7 +4,7 @@
   "description": "A custom Node-RED node to interact with MPDV MIP HydraX API",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felix-reck/node-red-mip.git"
+    "url": "git+https://github.com/felix-reck/node-red-mip.git"
   },
   "license": "Apache-2.0",
   "author": "Felix Reck",
