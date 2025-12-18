@@ -32,4 +32,4 @@ jobs:
           registry-url: https://registry.npmjs.org/
       # Run npm install again in the publish step
       - run: npm install
-      - run: npm publish --access public
+      - run: npm publish --access public --provenance
